@@ -29,6 +29,12 @@ function currencyexchange() {
 				"one euro is equal"+" "+euroToDollars+" "+"dollars." );
 		}
 	}
+
+	else if (isNaN(euro) && isNaN(dollars)){
+		alert("ooops,two currency is not a number, you can write only a numbers,try again!");
+		currencyexchange();
+	}
+
 	else if(isNaN(euro)){
 		alert("ooops,euro currency is not a number, you can write only a numbers,try again!");
 		currencyexchange();
@@ -37,11 +43,11 @@ function currencyexchange() {
 		alert("ooops,dollar currency is not a number, you can write only a numbers,try again!");
 		currencyexchange();
 	}
+	
 	else {
-		alert("ooops,two currency is not a number, you can write only a numbers,try again!");
+		alert("opps,try again!");
 		currencyexchange();
 	}
 }
 
-
- currencyexchange();
+currencyexchange();
